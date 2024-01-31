@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collatz</title>
+    <style>
+        .svarbox {
+            width: 1000px;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    Skriv inn eit heilt positivt tal: <br />
+    <input id="theNumber" type="number" />
+    <button onclick="calculate()">Send inn talet</button>
+    <div class="svarbox" id="print"></div>
+    <script>
+        function calculate() {
+            let collatz = document.getElementById('theNumber').valueAsNumber;
+            let verdi = collatz;
+            let answer = [];
+            answer.push(collatz)
+            while (collatz > 1) {
+                if (collatz % 2 == 0) {
+                    collatz = collatz / 2
+                    answer.push(collatz)
+                }
+                else {
+                    collatz = collatz * 3 + 1
+                    answer.push(collatz)
+                }
+            }
+            
+            document.getElementById('print').innerHTML = 'Collatz-følga til ' + verdi + ' er <br/>'
+            for (i=0;i<answer.length-1;i++) {
+                document.getElementById('print').innerHTML += answer[i] + ', '
+            }
+            document.getElementById('print').innerHTML += answer[ answer.length - 1]
+        }
+
+    </script>
+</body>
+
+</html>

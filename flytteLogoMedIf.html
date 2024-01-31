@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flytte Logo</title>
+    <style>
+        div.outerBoard{
+            border: solid 5px purple;
+            width: 520px;
+            height: 250px;
+        }
+        div.board {
+            display: grid;
+            grid-template-columns: repeat(2,260px);
+            grid-template-rows: repeat(2,125px);
+        }
+        div.square {
+            border: solid 1px gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div.knapper {
+            display: grid;
+            grid-template-columns: repeat(3,30px);
+            grid-template-rows: repeat(3,30px);
+            margin-left: 220px;
+        }
+        div.knapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;    
+        }
+    </style>
+</head>
+<body>
+    <h1>Team 3</h1>
+    <div class="outerBoard">
+        <div class="board">
+            <div id="r1c1" class="square"><img width="200" src="https://getacademy.no/hubfs/GET_RGB_logo-01-2.png" /></div>
+            <div id="r1c2" class="square"></div>
+            <div id="r2c1" class="square"></div>
+            <div id="r2c2" class="square"></div>
+        </div>
+    </div>
+    <div class="knapper">
+        <div class="knapp"></div>
+        <div class="knapp"><button onclick="flyttUp('r1c1','r1c2','r2c1','r2c2')">▲</button></div>
+        <div class="knapp"></div>
+        <div class="knapp"><button onclick="flyttLeft('r1c1','r1c2','r2c1','r2c2')">◀</button></div>
+        <div class="knapp"></div>
+        <div class="knapp"><button onclick="flyttRight('r1c1','r1c2','r2c1','r2c2')">▶</button></div>
+        <div class="knapp"></div>
+        <div class="knapp"><button onclick="flyttDown('r1c1','r1c2','r2c1','r2c2')">▼</button></div>
+        <div class="knapp"></div>
+    </div>
+
+    <script>
+        function flyttUp(a1,a2,a3,a4) {
+            if (document.getElementById(a1).innerHTML == '' && document.getElementById(a3).innerHTML !== '') {
+                document.getElementById(a1).innerHTML = document.getElementById(a3).innerHTML
+                document.getElementById(a3).innerHTML = ''
+            }
+            else if (document.getElementById(a2).innerHTML == '' && document.getElementById(a4).innerHTML !== '') {
+                document.getElementById(a2).innerHTML = document.getElementById(a4).innerHTML
+                document.getElementById(a4).innerHTML = ''
+            }
+        }
+        function flyttLeft(a1,a2,a3,a4) {
+            if (document.getElementById(a1).innerHTML == '' && document.getElementById(a2).innerHTML !== '') {
+                document.getElementById(a1).innerHTML = document.getElementById(a2).innerHTML
+                document.getElementById(a2).innerHTML = ''
+            }
+            else if (document.getElementById(a3).innerHTML == '' && document.getElementById(a4).innerHTML !== '') {
+                document.getElementById(a3).innerHTML = document.getElementById(a4).innerHTML
+                document.getElementById(a4).innerHTML = ''
+            }
+        }
+        function flyttRight(a1,a2,a3,a4) {
+            if (document.getElementById(a2).innerHTML == '' && document.getElementById(a1).innerHTML !== '') {
+                document.getElementById(a2).innerHTML = document.getElementById(a1).innerHTML
+                document.getElementById(a1).innerHTML = ''
+            }
+            else if (document.getElementById(a4).innerHTML == '' && document.getElementById(a3).innerHTML !== '') {
+                document.getElementById(a4).innerHTML = document.getElementById(a3).innerHTML
+                document.getElementById(a3).innerHTML = ''
+            }
+        }
+        function flyttDown(a1,a2,a3,a4) {
+            if (document.getElementById(a3).innerHTML == '' && document.getElementById(a1).innerHTML !== '') {
+                document.getElementById(a3).innerHTML = document.getElementById(a1).innerHTML
+                document.getElementById(a1).innerHTML = ''
+            }
+            else if (document.getElementById(a4).innerHTML == '' && document.getElementById(a2).innerHTML !== '') {
+                document.getElementById(a4).innerHTML = document.getElementById(a2).innerHTML
+                document.getElementById(a2).innerHTML = ''
+            }
+        }
+    </script>
+    
+</body>
+</html>

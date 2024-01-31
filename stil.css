@@ -1,0 +1,72 @@
+body{
+    margin-left: 20px;
+}
+
+.card{
+    width: 500px;
+    background-color: lightgray;
+    border: solid 1px darkgray;
+    margin: 10px;
+}
+
+.innerCard{
+    padding: 10px;
+}
+
+.header{
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    padding: 1px 0;
+    border: solid 1px gray;
+    user-select: none;
+}
+
+.green{
+    background-color: #3cba54;
+}
+
+.blue{
+    background-color: #4885ed;
+}
+
+.red{
+    background-color: #db3236;
+}
+
+.yellow{
+    background-color: #f4c20d;
+}
+
+.dark{
+    background-color: #36393f;
+}
+
+.bilder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bildeKnapp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2,520px);
+    width: auto;
+}

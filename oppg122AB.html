@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgåve 122A</title>
+    <style>
+        #board {
+            display: grid;
+            grid-template-columns: repeat(8,50px);
+            grid-template-rows: repeat(8,50px);
+        }
+        #board>div {
+            border: solid lightblue 1px;
+        }
+        .selected {
+            background-color: yellow;
+        }
+        div.knapper {
+            display: grid;
+            grid-template-columns: repeat(3,30px);
+            grid-template-rows: repeat(3,30px);
+            margin-left: 110px;
+        }
+        div.knapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }    
+    </style>
+</head>
+<body>
+    <div id="board"></div>
+    <div class="knapper">
+        <div class="knapp"></div>
+        <div class="knapp"><button onclick="moveUp()">▲</button></div>
+        <div class="knapp"></div>
+        <div class="knapp"><button onclick="moveLeft()">◀</button></div>
+        <div class="knapp"></div>
+        <div class="knapp"><button onclick="moveRight()">▶</button></div>
+        <div class="knapp"></div>
+        <div class="knapp"><button onclick="moveDown()">▼</button></div>
+        <div class="knapp"></div>
+    </div>
+    <script>
+        let selected = Math.floor(Math.random()*64)+1
+        buildBoard(selected)
+        function buildBoard(a) {
+            for (let i=0;i<64;i++){
+                if (i==a-1) {
+                    document.getElementById('board').innerHTML+=/*HTML*/`
+                        <div class="selected"></div>
+                    `
+                }
+                else {
+                    document.getElementById('board').innerHTML+=/*HTML*/`
+                        <div></div>
+                    `    
+                }
+            }    
+        }
+        function buildNewBoard(a) {
+            document.getElementById('board').innerHTML=''
+            buildBoard(a)
+        }
+
+        function moveRight() {
+            if (selected % 8 !== 0 ) {
+                selected ++
+                buildNewBoard(selected)
+            }
+        }
+
+        function moveLeft() {
+            if (selected % 8 !== 1) {
+                selected --
+                buildNewBoard(selected)
+            }
+        }
+
+        function moveUp() {
+            if (selected > 8) {
+                selected = selected - 8
+                buildNewBoard(selected)
+            }
+        }
+
+        function moveDown() {
+            if (selected<57) {
+                selected = selected + 8
+                buildNewBoard(selected)
+            }
+        }
+        
+    </script>
+</body>
+    
+</html>

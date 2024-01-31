@@ -1,0 +1,2837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #board {
+            display: grid;
+            grid-template-columns: repeat(4, 200px);
+            grid-template-rows: repeat(4, 200px);
+        }
+
+        #board>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid gray;
+            background-color: darkgray;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="board">
+        <div onclick="show1()"></div>
+        <div onclick="show2()"></div>
+        <div onclick="show3()"></div>
+        <div onclick="show4()"></div>
+        <div onclick="show5()"></div>
+        <div onclick="show6()"></div>
+        <div onclick="show7()"></div>
+        <div onclick="show8()"></div>
+        <div onclick="show9()"></div>
+        <div onclick="show10()"></div>
+        <div onclick="show11()"></div>
+        <div onclick="show12()"></div>
+        <div onclick="show13()"></div>
+        <div onclick="show14()"></div>
+        <div onclick="show15()"></div>
+        <div onclick="show16()"></div>
+    </div>
+    <script>
+        //show single pictures
+        function show1() {
+            document.getElementById('board').innerHTML = `
+            <div><img src="img/dog.jpg"/></div>
+            <div onclick="show1and2()"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            `
+        }
+        function show2() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="show1and2()"></div>
+            <div><img src="img/frog.jpg"/></div>
+            <div onclick="show3()"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            `
+        }
+        function show3() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="show1()"></div>
+            <div></div>
+            <div><img src="img/horse.jpg"/></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            `
+        }
+        function show4() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="show1()"></div>
+            <div></div>
+            <div></div>
+            <div><img src="img/chicken.jpg"/></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            `
+        }
+        function show5() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="show1()"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div><img src="img/spider.jpg"/></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            `
+        }
+        function show6() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="show1()"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div><img src="img/frog.jpg"/></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            `
+        }
+        function show7() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="show1()"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div><img src="img/spider.jpg"/></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            `
+        }
+        function show8() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="show1()"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div><img src="img/tiger.jpg"/></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            `
+        }
+        function show9() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="show1()"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div><img src="img/chicken.jpg"/></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            `
+        }
+        function show10() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="show1()"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div><img src="img/dog.jpg"/></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            `
+        }
+        function show11() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="show1()"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div><img src="img/elephant.jpg"/></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            `
+        }
+        function show12() {
+            document.getElementById('board').innerHTML = `
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div><img src="img/cat.gif"/></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            `
+        }
+        function show13() {
+            document.getElementById('board').innerHTML = `
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div><img src="img/cat.gif"/></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            `
+        }
+        function show14() {
+            document.getElementById('board').innerHTML = `
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div><img src="img/elephant.jpg"/></div>
+            <div></div>
+            <div></div>
+            `
+        }
+        function show15() {
+            document.getElementById('board').innerHTML = `
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div><img src="img/horse.jpg"/></div>
+            <div></div>
+            `
+        }
+        function show16() {
+            document.getElementById('board').innerHTML = `
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div><img src="img/tiger.jpg"/></div>
+            `
+        }
+
+        //show picture 1 and picture X
+        function show1and2() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show1and3() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show1and4() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show1and5() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show1and6() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show1and7() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show1and8() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show1and9() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show1and10() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show1and11() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show1and12() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show1and13() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show1and14() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show1and15() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show1and16() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `            
+        }
+
+        //show picture 2 and picture X
+        function show2and3() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show2and4() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show2and5() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show2and6() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show2and7() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            ` 
+        }       
+        function show2and8() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show2and9() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show2and10() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show2and11() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show2and12() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show2and13() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show2and14() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show2and15() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            ` 
+        }       
+        function show2and16() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `            
+        }
+
+        //show picture 3 and picture X
+        function show3and4() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show3and5() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show3and6() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show3and7() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show3and8() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show3and9() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show3and10() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show3and11() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show3and12() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show3and13() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show3and14() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `    
+        }    
+        function show3and15() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `   
+        }
+
+        function show3and16() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `            
+        }
+
+        //show picture 4 and picture X
+        function show4and5() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show4and6() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show4and7() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show4and8() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show4and9() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show4and10() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show4and11() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show4and12() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show4and13() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show4and14() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `    
+        }    
+        function show4and15() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `   
+        }
+
+        function show4and16() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `            
+        }
+
+        //show picture 5 and X
+        function show5and6() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show5and7() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show5and8() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show5and9() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show5and10() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show5and11() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show5and12() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show5and13() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show5and14() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `    
+        }    
+        function show5and15() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `   
+        }
+
+        function show5and16() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `            
+        }
+
+        //show picture 6 and X
+        function show6and7() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show6and8() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show6and9() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show6and10() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show6and11() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show6and12() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show6and13() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show6and14() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `    
+        }    
+        function show6and15() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `   
+        }
+
+        function show6and16() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `            
+        }
+
+        //show picture 7 and X
+        function show7and8() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show7and9() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show7and10() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show7and11() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show7and12() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show7and13() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show7and14() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `    
+        }    
+        function show7and15() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `   
+        }
+
+        function show7and16() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `            
+        }
+
+        //show picture 8 and X
+        function show8and9() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show8and10() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show8and11() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show8and12() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show8and13() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show8and14() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `    
+        }    
+        function show8and15() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `   
+        }
+
+        function show8and16() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `            
+        }
+
+        //show picture 9 and X
+        function show9and10() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }        
+        function show9and11() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show9and12() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show9and13() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show9and14() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `    
+        }    
+        function show9and15() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `   
+        }
+
+        function show9and16() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `            
+        }
+
+        //show picture 10 and X
+        function show10and11() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show10and12() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show10and13() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show10and14() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `    
+        }    
+        function show10and15() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `   
+        }
+
+        function show10and16() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `            
+        }
+
+        //show picture 11 and X
+        function show11and12() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show11and13() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show11and14() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `    
+        }    
+        function show11and15() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `   
+        }
+
+        function show11and16() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `            
+        }
+
+        //show picture 12 and X
+        function show12and13() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `
+        }    
+        function show12and14() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `    
+        }    
+        function show12and15() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"><img src="img/dog.jpg"/></div>
+            <div onclick="blank()"><img src="img/frog.jpg"/></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            `   
+        }
+
+        function show12and16() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `            
+        }
+
+        //show picture 13 and X
+        function show13and14() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `    
+        }    
+        function show13and15() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `   
+        }
+
+        function show13and16() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `            
+        }
+
+        //show picture 14 and X
+        function show14and15() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `   
+        }
+
+        function show14and16() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `            
+        }
+
+        //show picture 15 and X
+        function show14and16() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            <div onclick="blank()"></div>
+            `            
+        }
+
+        function blank() {
+            document.getElementById('board').innerHTML = `
+            <div onclick="show1()"></div>
+            <div onclick="show2()"></div>
+            <div onclick="show3()"></div>
+            <div onclick="show4()"></div>
+            <div onclick="show5()"></div>
+            <div onclick="show6()"></div>
+            <div onclick="show7()"></div>
+            <div onclick="show8()"></div>
+            <div onclick="show9()"></div>
+            <div onclick="show10()"></div>
+            <div onclick="show11()"></div>
+            <div onclick="show12()"></div>
+            <div onclick="show13()"></div>
+            <div onclick="show14()"></div>
+            <div onclick="show15()"></div>
+            <div onclick="show16()"></div>
+            `
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flytte rundt på en logo</title>
+    <style>
+        div.square {
+            border: 3px solid rgb(55, 12, 209);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div.board {
+            display: grid;
+            grid-template-columns: repeat(2, 250px);
+            grid-template-rows: repeat(2, 120px);
+        }
+        button.updown {
+            position: relative;
+            right: -235px;
+        }
+        button.right {
+            position: relative;
+            right: -235px;
+        }
+        button.left {
+            position: relative;
+            right: -207px;
+        }
+        input.reset {
+            position: relative;
+            right: -225px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Team 3</h1>
+
+    <div id="app">
+    </div>
+
+    <script>
+        showLogoToTheRightAndUp();
+        function showLogoToTheRightAndUp() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <div class="board">
+                    <div class="square"></div>
+                    <div class="square">
+                        <img width="200" src="https://getacademy.no/hubfs/GET_RGB_logo-01-2.png" />
+                    </div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div>
+                    <br/>
+                    <button class="updown">▲</button>
+                    <br/>
+                    <button class="left" onclick="showLogoToTheLeftAndUp()">◀</button>
+                    <button class="right">▶</button>
+                    <br/>
+                    <button class="updown" onclick="showLogoToTheRightAndDown()">▼</button>
+                </div>        
+            `;
+
+        }
+
+        function showLogoToTheLeftAndUp() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <div class="board">
+                    <div class="square">
+                        <img width="200" src="https://getacademy.no/hubfs/GET_RGB_logo-01-2.png" />
+                    </div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+                <div>
+                    <br/>
+                    <button class="updown">▲</button>
+                    <br/>
+                    <button class="left" onclick="showLogoToTheLeftAndUp()">◀</button>
+                    <button class="right" onclick="showLogoToTheRightAndUp()">▶</button>
+                    <br/>
+                    <button class="updown" onclick="showLogoToTheLeftAndDown()">▼</button>
+                </div>        
+            `;
+
+        }
+
+        function showLogoToTheRightAndDown() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <div class="board">
+                    <div class="square">
+                        
+                    </div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square">
+                        <img width="200" src="https://getacademy.no/hubfs/GET_RGB_logo-01-2.png" />
+                    </div>
+                </div>
+                <div>
+                    <br/>
+                    <button class="updown" onclick="showLogoToTheRightAndUp()">▲</button>
+                    <br/>
+                    <button class="left" onclick="showLogoToTheLeftAndDown()">◀</button>
+                    <button class="right">▶</button>
+                    <br/>
+                    <button class="updown">▼</button>
+                </div>        
+            `;
+
+        }
+
+        function showLogoToTheLeftAndDown() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <div class="board">
+                    <div class="square">
+                        
+                    </div>
+                    <div class="square"></div>
+                    <div class="square">
+                        <img width="200" src="https://getacademy.no/hubfs/GET_RGB_logo-01-2.png" />
+                    </div>
+                    <div class="square">
+                        
+                    </div>
+                </div>
+                <div>
+                    <br/>
+                    <button class="updown" onclick="showLogoToTheLeftAndUp()">▲</button>
+                    <br/>
+                    <button class="left" onclick="showLogoToTheLeftAndDown()">◀</button>
+                    <button class="right" onclick="showLogoToTheRightAndDown()">▶</button>
+                    <br/>
+                    <button class="updown">▼</button>
+                </div>        
+            `;
+
+        }
+    </script>
+    <form>
+        <br />
+        <div>
+            <input onclick="showLogoToTheRightAndUp()" class="reset" type="reset" />
+        </div>
+    </form>
+</body>
+
+</html>

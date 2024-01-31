@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgåve 122 CD</title>
+    <style>
+        div.rute {
+            width: 500px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid 1px red;
+        }
+        div.table {
+            display: grid;
+            grid-template-columns: repeat(3,167px);        
+        }
+        div.farger {
+            display: flex;
+            border: solid 1px lightgrey;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="rute" id="mySquare">Hei og hå</div>
+    </br>
+    <p>Change text-size</p>
+    <div>
+        <div><button onclick="moveUp()">▲</button><button onclick="moveDown()">▼</button></div>
+    </div>
+    </br>
+    <p>Change text-color</p>
+    <div class="table">
+        <div class="farger">Red</div>
+        <div class="farger">Green</div>
+        <div class="farger">Blue</div>
+
+        <div class="farger"><button onclick="redUp()">▲</button><button onclick="redDown()">▼</button></div>
+        <div class="farger"><button onclick="greenUp()">▲</button><button onclick="greenDown()">▼</button></div>
+        <div class="farger"><button onclick="blueUp()">▲</button><button onclick="blueDown()">▼</button></div>
+        
+        <div class="farger" id="redNumber"></div>
+        <div class="farger" id="greenNumber"></div>
+        <div class="farger" id="blueNumber"></div>
+    </div>
+    </br>
+    <p>Choose font</p>
+    <select onchange="changeFont(this.value)">
+        <option>Arial</option>
+        <option>Verdana</option>
+        <option>Tahoma</option>
+        <option>Trebuchet MS</option>
+        <option>Times New Roman</option>
+        <option>Georgia</option>
+        <option>Garamond</option>
+        <option>Courier New</option>
+        <option>Brush Script MT</option>
+    </select>
+    <script>
+        var textSize = 100;
+        var redColor = 125;
+        var greenColor = 125;
+        var blueColor = 125;
+        changeTextColor()
+        displayColors()
+        function reSize(a) {
+            document.getElementById('mySquare').style.fontSize = `${a}%`
+        }
+
+        function changeFont(font) {
+            document.getElementById('mySquare').style.fontFamily = `${font}`
+        }
+
+        function changeTextColor() {
+            document.getElementById('mySquare').style.color = `rgb(${redColor},${greenColor},${blueColor})`
+        }
+
+        function displayColors() {
+            document.getElementById('redNumber').innerHTML=`${redColor}`
+            document.getElementById('greenNumber').innerHTML=`${greenColor}`
+            document.getElementById('blueNumber').innerHTML=`${blueColor}`
+        }
+        function moveUp() {
+            if (textSize<600) {
+                textSize += 10
+                reSize(textSize)
+            }            
+        }
+
+        function moveDown() {
+            if (textSize>10) {
+                textSize -= 10
+                reSize(textSize)    
+            }
+        }
+
+        function redUp() {
+            if (redColor<246) {
+                redColor += 10
+                changeTextColor()
+                displayColors()
+            }
+            else {
+                redColor = 255
+                changeTextColor()
+                displayColors()
+            }
+        }
+
+        function redDown() {
+            if (redColor>9) {
+                redColor -= 10
+                changeTextColor()
+                displayColors()
+            }
+            else {
+                redColor = 0
+                changeTextColor()
+                displayColors()
+            }
+        }
+
+        function greenUp() {
+            if (greenColor<246) {
+                greenColor += 10
+                changeTextColor()
+                displayColors()
+            }
+            else {
+                greenColor = 255
+                changeTextColor()
+                displayColors()
+            }
+        }
+
+        function greenDown() {
+            if (greenColor>9) {
+                greenColor -= 10
+                changeTextColor()
+                displayColors()
+            }
+            else {
+                greenColor = 0
+                changeTextColor()
+                displayColors()
+            }
+        }
+
+        function blueUp() {
+            if (blueColor<246) {
+                blueColor += 10
+                changeTextColor()
+                displayColors()
+            }
+            else {
+                blueColor = 255
+                changeTextColor()
+                displayColors()
+            }
+        }
+
+        function blueDown() {
+            if (blueColor>9) {
+                blueColor -= 10
+                changeTextColor()
+                displayColors()
+            }
+            else {
+                blueColor = 0
+                changeTextColor()
+                displayColors()
+            }
+        }
+    </script>
+</body>
+</html>

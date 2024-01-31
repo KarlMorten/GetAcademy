@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sjakkbrett</title>
+    <style>
+        div.lightSquare {
+            background-color:rgb(240, 217, 181);
+        }
+        div.darkSquare {
+            background-color: rgb(181, 136, 99);
+        }
+    </style>
+</head>
+<body>
+    <div class="boards" id="board"></div>
+    <script>
+        var columns = 8;
+        var rows = 8;
+        
+        addSquares()
+        makeBoard()
+        function makeBoard() {
+            document.getElementById('board').style.setProperty('display','grid')
+            document.getElementById('board').style.setProperty('grid-template-columns','repeat('+columns+',50px)')
+            document.getElementById('board').style.setProperty('grid-template-rows','repeat('+rows+',50px)')
+        }
+        function addSquares() {
+            let rownumber = -1
+            for (let i=0;i<columns*rows;i++) {
+                if (i % columns == 0) {
+                    rownumber++
+                }
+                if (rownumber % 2 == 0) {
+                    if ((i-rownumber*columns) % 2 ==0) {
+                        document.getElementById('board').innerHTML+=`<div class="lightSquare"></div>`
+                    }
+                    else {
+                        document.getElementById('board').innerHTML+=`<div class="darkSquare"></div>`
+                    }
+                }
+                else {
+                    if ((i-rownumber*columns) % 2 ==0) {
+                        document.getElementById('board').innerHTML+=`<div class="darkSquare"></div>`
+                    }
+                    else {
+                        document.getElementById('board').innerHTML+=`<div class="lightSquare"></div>`
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

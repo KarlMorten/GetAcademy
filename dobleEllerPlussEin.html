@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liten reknemaskin</title>
+    <style>
+        div.ramme {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 3px purple;
+            font-size: 200%;
+            margin-bottom: 10px;
+        }
+        div.knapp {
+            display: grid;
+            grid-template-columns: 100px 100px;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ramme" id="answer">
+        
+    </div> 
+    <div class="knapp">
+        <button onclick="addOne()">Pluss på 1</button>
+        <button onclick="double()">Doble talet</button>
+        <button onclick="reset()">Start på nytt</button>
+    </div>
+    <script>
+        var t=1;
+        document.getElementById('answer').innerHTML=t;
+        function addOne() {
+            t=t+1
+            document.getElementById('answer').innerHTML=t;
+        }
+        function double() {
+            t=2*t
+            document.getElementById('answer').innerHTML=t;
+        }
+        function reset() {
+            t=1
+            document.getElementById('answer').innerHTML=t;
+        }
+    </script>   
+</body>
+</html>

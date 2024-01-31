@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trafikkljos</title>
+    <style>
+        div.trafficLight {
+            background-color: black;
+            width: 6rem;
+            height: 20rem;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            gap: 1rem;
+        }
+        div.graylight {
+            background-color: gray;
+            border-radius: 50%;
+            width: 6rem;
+            height: 6rem;
+        }
+        div.redlight {
+            background-color: red;
+            border-radius: 50%;
+            width: 6rem;
+            height: 6rem;        
+        }
+        div.yellowlight {
+            background-color: yellow;
+            border-radius: 50%;
+            width: 6rem;
+            height: 6rem;        
+        }
+        div.greenlight {
+            background-color: rgb(11, 195, 11);
+            border-radius: 50%;
+            width: 6rem;
+            height: 6rem;        
+        }
+    </style>
+</head>
+<body>
+    <h2>Trykk på trafikklyset for å skifte lys</h2>
+    <div class="trafficLight" onclick="counter()">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+    </div>
+    
+    <script>
+        var t=1;
+        firstLight(t);
+        secondLight(t);
+        thirdLight(t);
+        function counter() {
+            if (t<4) {
+                t=t+1
+            }
+            else {
+                t=1
+            }
+            firstLight(t);
+            secondLight(t);
+            thirdLight(t);
+        }
+        function firstLight(a) {
+            if (a==1 || a==2) {
+                document.getElementById('first').classList.value = '';
+                document.getElementById('first').classList.add('redlight');
+            }
+            else {
+                document.getElementById('first').classList.value = '';
+                document.getElementById('first').classList.add('graylight');
+            }
+        }
+        function secondLight(b) {
+            if (b==1 || b==3) {
+                document.getElementById('second').classList.value = '';
+                document.getElementById('second').classList.add('graylight');
+            }
+            else {
+                document.getElementById('second').classList.value = '';
+                document.getElementById('second').classList.add('yellowlight');
+            }
+        }
+        function thirdLight(c) {
+            if (c==3) {
+                document.getElementById('third').classList.value = '';
+                document.getElementById('third').classList.add('greenlight');
+            }
+            else {
+                document.getElementById('third').classList.value = '';
+                document.getElementById('third').classList.add('graylight');
+            }
+        }
+    </script>
+</body>
+</html>

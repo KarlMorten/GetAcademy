@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilde-Lotto</title>
+    <style>
+        #board {
+            display: grid;
+            grid-template-columns: repeat(4, 125px);
+            grid-template-rows: repeat(4, 125px);
+        }
+
+        #board>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid gray;
+            background-color: darkgray;
+            margin: 3px;
+        }
+
+        img {
+            width: 100%;            
+        }
+    </style>
+</head>
+<body>
+    <h1 id="answer"></h1>
+    <div id="board">
+        <div onclick="showImage('dog1')"><img id="dog1" style="visibility: hidden;" src="img/dog.jpg"></div>
+        <div onclick="showImage('frog1')"><img id="frog1" style="visibility: hidden;" src="img/frog.jpg"/></div>
+        <div onclick="showImage('horse1')"><img id="horse1" style="visibility: hidden;" src="img/horse.jpg"/></div>
+        <div onclick="showImage('chicken1')"><img id="chicken1" style="visibility: hidden;" src="img/chicken.jpg"/></div>
+        <div onclick="showImage('spider1')"><img id="spider1" style="visibility: hidden;" src="img/spider.jpg"/></div>
+        <div onclick="showImage('frog2')"><img id="frog2" style="visibility: hidden;" src="img/frog.jpg"/></div>
+        <div onclick="showImage('spider2')"><img id="spider2" style="visibility: hidden;" src="img/spider.jpg"/></div>
+        <div onclick="showImage('tiger1')"><img id="tiger1" style="visibility: hidden;" src="img/tiger.jpg"/></div>
+        <div onclick="showImage('chicken2')"><img id="chicken2" style="visibility: hidden;" src="img/chicken.jpg"/></div>
+        <div onclick="showImage('dog2')"><img id="dog2" style="visibility: hidden;" src="img/dog.jpg"/></div>
+        <div onclick="showImage('elephant1')"><img id="elephant1" style="visibility: hidden;" src="img/elephant.jpg"/></div>
+        <div onclick="showImage('cat1')"><img id="cat1" style="visibility: hidden;" src="img/cat.gif"/></div>
+        <div onclick="showImage('cat2')"><img id="cat2" style="visibility: hidden;" src="img/cat.gif"/></div>
+        <div onclick="showImage('elephant2')"><img id="elephant2" style="visibility: hidden;" src="img/elephant.jpg"/></div>
+        <div onclick="showImage('horse2')"><img id="horse2" style="visibility: hidden;" src="img/horse.jpg"/></div>
+        <div onclick="showImage('tiger2')"><img id="tiger2" style="visibility: hidden;" src="img/tiger.jpg"/></div>
+    </div>   
+    <script>
+        var firstClicked = undefined
+        var pairsFound = 0
+        function showImage(clicked) {
+            document.getElementById(clicked).style.visibility = 'visible';
+            var secondClicked = clicked
+            if (firstClicked == undefined) {
+                firstClicked = clicked
+            }
+            if (firstClicked !== secondClicked && document.getElementById(firstClicked).src == document.getElementById(secondClicked).src) {
+                pairsFound ++
+                firstClicked = undefined
+            }
+            else if (firstClicked !== secondClicked) {
+                setTimeout(function(){
+                    document.getElementById(firstClicked).style.visibility='hidden';
+                    document.getElementById(secondClicked).style.visibility='hidden';
+                    firstClicked = undefined
+                }
+                ,1000)                
+            }
+            if (pairsFound == 8) {
+                document.getElementById('answer').innerHTML = 'Du har funne alle para'
+            }
+        }
+    </script>
+</body>
+</html>
