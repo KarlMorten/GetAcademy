@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <link rel="stylesheet" href="2versjon2048.css" />
+</head>
+
+<body>
+    <div id="theBoard" class="outerBoard"></div>
+
+    <script>
+        //eventuelle variablar kjem her:
+        let boardValues = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
+        let poeng = 0;
+        let probNewTwo = 0.9;
+        //view:
+        addPiece()
+        addPiece()
+        function updateView() {
+            document.getElementById('theBoard').innerHTML = /*HTML*/`
+                <div class="board">
+                    <div class="square${boardValues[0]}">${boardValues[0]}</div>
+                    <div class="square${boardValues[1]}">${boardValues[1]}</div>
+                    <div class="square${boardValues[2]}">${boardValues[2]}</div>
+                    <div class="square${boardValues[3]}">${boardValues[3]}</div>
+
+                    <div class="square${boardValues[4]}">${boardValues[4]}</div>
+                    <div class="square${boardValues[5]}">${boardValues[5]}</div>
+                    <div class="square${boardValues[6]}">${boardValues[6]}</div>
+                    <div class="square${boardValues[7]}">${boardValues[7]}</div>
+
+                    <div class="square${boardValues[8]}">${boardValues[8]}</div>
+                    <div class="square${boardValues[9]}">${boardValues[9]}</div>
+                    <div class="square${boardValues[10]}">${boardValues[10]}</div>
+                    <div class="square${boardValues[11]}">${boardValues[11]}</div>
+
+                    <div class="square${boardValues[12]}">${boardValues[12]}</div>
+                    <div class="square${boardValues[13]}">${boardValues[13]}</div>
+                    <div class="square${boardValues[14]}">${boardValues[14]}</div>
+                    <div class="square${boardValues[15]}">${boardValues[15]}</div>                
+                </div>
+                <div class="knapper">
+                    <div class="knapp"></div>
+                    <div class="knapp"><button onclick="moveUp()">▲</button></div>
+                    <div class="knapp"></div>
+                    <div class="knapp"><button onclick="moveLeft()">◀</button></div>
+                    <div class="knapp"></div>
+                    <div class="knapp"><button onclick="moveRight()">▶</button></div>
+                    <div class="knapp"></div>
+                    <div class="knapp"><button onclick="moveDown()">▼</button></div>
+                    <div class="knapp"></div>
+                </div>
+                <div class="poeng" id="answer">${poeng}</div>
+            `;
+        }
+
+        //controller
+        function addPiece() {
+            let unfilledTiles = []
+            for (let i = 0; i < boardValues.length; i++) {
+                if (boardValues[i] == '') {
+                    unfilledTiles.push(i)
+                }
+            }
+            let newTileValue = 2;
+            let newTilePosition = Math.floor(Math.random() * unfilledTiles.length)
+            if (Math.random() > probNewTwo) {
+                newTileValue = 4
+            }
+            if (unfilledTiles.length > 0) {
+                boardValues[unfilledTiles[newTilePosition]] = newTileValue
+            }            
+            updateView()
+        }
+        function doTheMove(a, b, c, d) {
+            let verdiTabell = [boardValues[a], boardValues[b], boardValues[c], boardValues[d]]
+            for (let i = 2; i < 5; i++) {
+                if (verdiTabell[4 - i] == '') {
+                    verdiTabell.splice(4 - i, 1)
+                    verdiTabell.push('')
+                }
+            }
+            if (verdiTabell[0] == verdiTabell[1]) {
+                if (verdiTabell[2] == verdiTabell[3] && verdiTabell[2] != '') {
+                    poeng += 2 * verdiTabell[2]
+                    verdiTabell[2] = 2 * verdiTabell[2]
+                    verdiTabell[3] = ''                    
+                }                
+                poeng += 2 * verdiTabell[0]
+                verdiTabell[0] = 2 * verdiTabell[0]
+                verdiTabell[1] = verdiTabell[2]
+                verdiTabell[2] = verdiTabell[3]
+                verdiTabell[3] = ''
+            }
+            else if (verdiTabell[1] == verdiTabell[2] && verdiTabell[1] != '') {
+                poeng += 2 * verdiTabell[1]
+                verdiTabell[1] = 2 * verdiTabell[1]
+                verdiTabell[2] = verdiTabell[3]
+                verdiTabell[3] = ''                
+            }
+            else if (verdiTabell[2] == verdiTabell[3] && verdiTabell[2] != '') {
+                poeng += 2 * verdiTabell[2]
+                verdiTabell[2] = 2 * verdiTabell[2]
+                verdiTabell[3] = ''                
+            }
+            boardValues[a] = verdiTabell[0]
+            boardValues[b] = verdiTabell[1]
+            boardValues[c] = verdiTabell[2]
+            boardValues[d] = verdiTabell[3]
+        }
+        function canMove(a, b, c, d) {
+            if (a == '' && b == '' && c == '' && d == '') {
+                return false
+            }
+            else if (a != '' && b == '' && c == '' && d == '') {
+                return false
+            }
+            else if (a != '' && b != '' && c == '' && d == '' && a != b) {
+                return false
+            }
+            else if (a != '' && b != '' && c != '' && d == '' && a != b && b != c) {
+                return false
+            }
+            else if (a != '' && b != '' && c != '' && d == '' && a != b && b != c && c != d) {
+                return false
+            }
+            return true
+        }
+        function moveUp() {
+            let movecounter = 0
+            if (canMove(boardValues[0], boardValues[4], boardValues[8], boardValues[12])) {
+                doTheMove(0, 4, 8, 12)
+                movecounter++
+            }
+            if (canMove(boardValues[1], boardValues[5], boardValues[9], boardValues[13])) {
+                doTheMove(1, 5, 9, 13)
+                movecounter++
+            }
+            if (canMove(boardValues[2], boardValues[6], boardValues[10], boardValues[14])) {
+                doTheMove(2, 6, 10, 14)
+                movecounter++
+            }
+            if (canMove(boardValues[3], boardValues[7], boardValues[11], boardValues[15])) {
+                doTheMove(3, 7, 11, 15)
+                movecounter++
+            }
+            if (movecounter > 0) {
+                addPiece()
+            }
+        }
+        function moveLeft() {
+            let movecounter = 0
+            if (canMove(boardValues[0], boardValues[1], boardValues[2], boardValues[3])) {
+                doTheMove(0, 1, 2, 3)
+                movecounter++
+            }
+            if (canMove(boardValues[4], boardValues[5], boardValues[6], boardValues[7])) {
+                doTheMove(4, 5, 6, 7)
+                movecounter++
+            }
+            if (canMove(boardValues[8], boardValues[9], boardValues[10], boardValues[11])) {
+                doTheMove(8, 9, 10, 11)
+                movecounter++
+            }
+            if (canMove(boardValues[12], boardValues[13], boardValues[14], boardValues[15])) {
+                doTheMove(12, 13, 14, 15)
+                movecounter++
+            }
+            if (movecounter > 0) {
+                addPiece()
+            }
+        }
+        function moveRight() {
+            let movecounter = 0
+            if (canMove(boardValues[3], boardValues[2], boardValues[1], boardValues[0])) {
+                doTheMove(3, 2, 1, 0)
+                movecounter++
+            }
+            if (canMove(boardValues[7], boardValues[6], boardValues[5], boardValues[4])) {
+                doTheMove(7, 6, 5, 4)
+                movecounter++
+            }
+            if (canMove(boardValues[11], boardValues[10], boardValues[9], boardValues[8])) {
+                doTheMove(11, 10, 9, 8)
+                movecounter++
+            }
+            if (canMove(boardValues[15], boardValues[14], boardValues[13], boardValues[12])) {
+                doTheMove(15, 14, 13, 12)
+                movecounter++
+            }
+            if (movecounter > 0) {
+                addPiece()
+            }
+        }
+        function moveDown() {
+            let movecounter = 0
+            if (canMove(boardValues[12], boardValues[8], boardValues[4], boardValues[0])) {
+                doTheMove(12, 8, 4, 0)
+                movecounter++
+            }
+            if (canMove(boardValues[13], boardValues[9], boardValues[5], boardValues[1])) {
+                doTheMove(13, 9, 5, 1)
+                movecounter++
+            }
+            if (canMove(boardValues[14], boardValues[10], boardValues[6], boardValues[2])) {
+                doTheMove(14, 10, 6, 2)
+                movecounter++
+            }
+            if (canMove(boardValues[15], boardValues[11], boardValues[7], boardValues[3])) {
+                doTheMove(15, 11, 7, 3)
+                movecounter++
+            }
+            if (movecounter > 0) {
+                addPiece()
+            }
+        }
+    </script>
+</body>
+
+</html>
