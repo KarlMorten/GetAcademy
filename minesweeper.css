@@ -1,0 +1,117 @@
+div.square {
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    margin: 1px;
+    background-color: lightblue;
+}
+div.square0 {
+    border: solid 1px black;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    margin: 1px;
+    background-color: lightgrey;
+}
+div.square1 {
+    border: solid 1px black;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    margin: 1px;
+    background-color: lightgrey;
+    color: blue;
+}
+div.square2 {
+    border: solid 1px black;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    margin: 1px;
+    background-color: lightgrey;
+    color: green;
+}
+div.square3 {
+    border: solid 1px black;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    margin: 1px;
+    background-color: lightgrey;
+    color: red;
+}
+div.square4 {
+    border: solid 1px black;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    margin: 1px;
+    background-color: lightgrey;
+    color: darkblue;
+}
+div.square5 {
+    border: solid 1px black;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    margin: 1px;
+    background-color: lightgrey;
+    color: brown;
+}
+div.square6 {
+    border: solid 1px black;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    margin: 1px;
+    background-color: lightgrey;
+    color: rgb(33, 182, 167);
+}
+div.square7 {
+    border: solid 1px black;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    margin: 1px;
+    background-color: lightgrey;
+    color: black;
+}
+div.square8 {
+    border: solid 1px black;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    margin: 1px;
+    background-color: lightgrey;
+    color: darkgray;
+}
+div.square9 {
+    border: solid 1px black;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    margin: 1px;
+    background-color: lightcoral;
+}
